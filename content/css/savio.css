@@ -1,0 +1,120 @@
+body{
+    background-color: black;
+}
+
+.barhead{
+ color: white;
+ text-align: center;
+
+}
+.cust{
+    color:rgb(153, 115, 153);
+
+}
+#savfont{
+    color: white !important;
+
+}
+.savval{
+    float: right;
+    color:#555dc8;
+}
+.savbox{
+     background-color: rgb(54, 51, 51);
+    border: 1px solid black;
+    position: relative;
+   }
+.savbox1{
+    background-color: #222222 !important;
+    border: 1px #222222 !important;
+}
+.savbtn{
+ background-color: purple;
+    width:250px;
+    color: white;
+}
+.cust1{
+    color:rgb(153, 115, 153);
+    background: rgba(20, 18, 20, 0.54);
+    padding-top:0px;
+    border: 2px solid;
+    padding-left:5px;
+}
+.panel-body ul{
+    color:rgb(153, 115, 153);
+    list-style-type: none;
+    padding-left: 1px;
+}
+
+.savhr{
+background-color: #555dc8 !important;
+    width:100%;
+
+}
+.savkey{
+    float:left;
+
+}
+.btnfmt{
+    text-align: center;
+}
+.savsize{
+    height: 146px;
+}
+.savimg{
+ width:100%;
+    position: absolute;
+     bottom: 0;
+    margin-bottom: 7px;
+}
+
+.savimgleft{
+    float: left;
+width: 30%;
+}
+.savimgcenter{
+    width: 30%;
+    border-radius: 5px;
+}
+.savimgright{
+    float: right;
+    width: 30%;
+}
+.savimgright img{
+    width:60%
+}
+.savimgleft img{
+    width:60%
+}
+img:hover{
+    cursor: pointer;
+}
+.summary{
+    color:white;
+    text-align: center;
+    width:60%
+
+}
+.sumdrink{
+    text-align: center;
+    width: 15%;
+}
+.overall{
+    color: rgb(153, 115, 153);
+    float: left;
+}
+.drinkhr{
+ width:20%;
+    margin-left :49px ;
+    color: white;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}

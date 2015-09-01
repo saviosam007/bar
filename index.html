@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bar Stock</title>
+    <link href="content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="content/css/savio.css" rel="stylesheet">
+</head>
+<h1 class="barhead">Bar Stock</h1>
+<body>
+<div class="container">
+<div ng-hide="drink1" ng-controller="mainCtrl as m">
+    <div class="col-md-12">
+        <div class="col-md-3 cust" ng-repeat="(key,value) in drink">
+            <span class="savkey">{{key}} </span><span id="savfont" class="savval">{{value.content}}{{value.type}}</span>
+            <hr class="savhr">
+        </div>
+    </div>
+
+
+<div class="container">
+    <h1 class="barhead">Orders</h1>
+
+<div class="row">
+
+    <div class="col-sm-2">
+        <div class="panel panel-default  savbox">
+            <div class="panel-heading savbox1">
+                <h3 class="panel-title cust"><strong>Bloody Mary</strong></h3>
+            </div>
+                <div class="panel-body savsize">
+                <ul>
+                <li>2 oz Vodka</li>
+                <li>4 oz Bloody Mary Mix</li>
+            <li>1 celery stalk</li>
+                </ul>
+                    <div class="savimg">
+                        <div class="savimgleft"><img ng-click="m.cal(name='bloodymary',count,count1=val+1,type='increase')" ng-init="count=0;val=0" src="content/img/plus-active.png"/></div>
+                        <input class="savimgcenter" type="number" ng-model="count1" ng-bind="m.name">
+                        <div class="savimgright"><img ng-click="m.cal(name='bloodymary',count,count1=count1-1,type='decrease')" ng-init="count=0" src="content/img/minus-active.png"/></div>
+                    </div>
+
+                </div>
+
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="panel panel-default savbox">
+            <div class="panel-heading savbox1">
+                <h3 class="panel-title cust"><strong>Martini</strong></h3>
+            </div>
+            <div class="panel-body savsize">
+                <ul>
+                    <li>2 oz Gin</li>
+                    <li>1 oz Dry Vermouth</li>
+                    <li>1 Olive</li>
+                </ul>
+                <div class="savimg">
+                    <div class="savimgleft"><img ng-click="m.mcal(name='martini',mcount,mcount1=mval+1,type='increase')" ng-init="mcount=0;mval=0" src="content/img/plus-active.png"/></div>
+                    <input class="savimgcenter" type="number" ng-model="mcount1">
+                    <div class="savimgright"><img ng-click="m.mcal(name='martini',mcount,mcount1=mcount1-1,type='decrease')" ng-init="mcount=0" src="content/img/minus-active.png"/></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    <div class="col-sm-2">
+        <div class="panel panel-default savbox">
+            <div class="panel-heading savbox1">
+                <h3 class="panel-title cust"><strong>Margarita</strong></h3>
+            </div>
+            <div class="panel-body savsize">
+                <ul>
+                    <li>2 oz Tequila</li>
+                    <li>1 oz Orange Juice</li>
+                    <li>1 Oz Agave Nectar</li>
+                    <li>1 Lime</li>
+                </ul>
+                <div class="savimg">
+                    <div class="savimgleft"><img ng-click="m.margritacal(name='margarita',marcount,marcount1=marval+1,type='increase')" ng-init="marcount=0;marval=0" src="content/img/plus-active.png"/></div>
+                    <input class="savimgcenter" type="number" ng-model="marcount1" ng-bind="m.name">
+                    <div class="savimgright"><img ng-click="m.margritacal(name='margarita',marcount,marcount1=marval-1,type='decrease')" ng-init="marcount=0" src="content/img/minus-active.png"/></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2"><div class="panel panel-default savbox">
+        <div class="panel-heading savbox1">
+            <h3 class="panel-title cust"><strong>Screwdriver</strong></h3>
+        </div>
+        <div class="panel-body savsize">
+            <ul>
+                <li>2 oz Vodka</li>
+                <li>4 oz Orange Juice</li>
+                  </ul>
+            <div class="savimg">
+                <div class="savimgleft"><img ng-click="m.screwcal(name='screwdriver',scount,scount1=sval+1,type='increase')" ng-init="scount=0;sval=0" src="content/img/plus-active.png"/></div>
+                <input class="savimgcenter" type="number" ng-model="scount1">
+                <div class="savimgright"><img ng-click="m.screwcal(name='screwdriver',scount,scount1=sval-1,type='decrease')" ng-init="scount=0" src="content/img/minus-active.png"/></div>
+            </div>
+             </div>
+    </div>
+    </div>
+    <div class="col-sm-2"><div class="panel panel-default savbox">
+        <div class="panel-heading savbox1">
+            <h3 class="panel-title cust"><strong>Manhattan</strong></h3>
+        </div>
+        <div class="panel-body savsize">
+            <ul>
+                <li>2 oz Whiskey</li>
+                <li>1 oz Sweet Vermouth</li>
+                <li>1 Cherry</li>
+            </ul>
+            <div class="savimg">
+                <div class="savimgleft"><img ng-click="m.mancal(name='manhattan',mancount,mancount1=manval+1,type='increase')" ng-init="mancount=0;manval=0" src="content/img/plus-active.png"/></div>
+                <input class="savimgcenter" type="number" ng-model="mancount1">
+                <div class="savimgright"><img ng-click="m.mancal(name='manhattan',mancount,mancount1=manval-1,type='decrease')" ng-init="mancount=0" src="content/img/minus-active.png"/></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
+    <div class="btnfmt">
+    <button class="btn btn-large center savbtn" ng-click="m.placeorder(count1,mcount1,marcount1,scount1,mancount1)"><strong>Place Order</strong></button>
+    </div>
+    </div>
+<div ng-show="drink1" summary-fn></div>
+</div>
+
+</div>
+<div ng-show="drink1" summary-fn>
+
+</div>
+</div>
+<script src="https://code.angularjs.org/1.3.15/angular.js"></script>
+<script src="bar.js"></script>
+</body>
+</html>
